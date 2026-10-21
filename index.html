@@ -661,6 +661,7 @@
       <a href="#biografia" data-t="nav_bio">Biografia</a>
       <a href="#contatti" data-t="nav_contact">Contatti</a>
       <a href="#blog" data-t="nav_blog">Blog</a>
+      <a href="privacy.html" data-t="nav_privacy">Privacy</a>
     </nav>
     <div class="f-bottom">
       <span>© 2026 Daniel Lippi. <span data-t="official">Tutti i diritti riservati.</span></span>
@@ -680,6 +681,7 @@
   "nav_awards": "Riconoscimenti",
   "awards_title": "Riconoscimenti",
   "nav_blog": "Blog",
+  "nav_privacy": "Privacy",
   "blog_title": "Blog",
   "blog_note": "",
   "btn_booktribu": "Acquista su BookTribu",
@@ -748,6 +750,7 @@
   "nav_awards": "Recognition",
   "awards_title": "Recognition",
   "nav_blog": "Blog",
+  "nav_privacy": "Privacy",
   "blog_title": "Blog",
   "blog_note": "Posts are in Italian.",
   "btn_booktribu": "Buy on BookTribu",
@@ -816,6 +819,7 @@
   "nav_awards": "Distinctions",
   "awards_title": "Distinctions",
   "nav_blog": "Blog",
+  "nav_privacy": "Confidentialité",
   "blog_title": "Blog",
   "blog_note": "Les articles sont en italien.",
   "btn_booktribu": "Acheter sur BookTribu",
@@ -884,6 +888,7 @@
   "nav_awards": "Reconocimientos",
   "awards_title": "Reconocimientos",
   "nav_blog": "Blog",
+  "nav_privacy": "Privacidad",
   "blog_title": "Blog",
   "blog_note": "Los artículos están en italiano.",
   "btn_booktribu": "Comprar en BookTribu",
@@ -952,6 +957,7 @@
   "nav_awards": "Auszeichnungen",
   "awards_title": "Auszeichnungen",
   "nav_blog": "Blog",
+  "nav_privacy": "Datenschutz",
   "blog_title": "Blog",
   "blog_note": "Die Beiträge sind auf Italienisch.",
   "btn_booktribu": "Bei BookTribu kaufen",
@@ -1060,6 +1066,8 @@
       if (v != null) el.setAttribute("aria-label", v);
     });
     document.title = d.meta_title;
+    var pl = document.querySelector('a[data-t="nav_privacy"]');
+    if (pl) pl.setAttribute("href", l === "it" ? "privacy.html" : "privacy-" + l + ".html");
     var md = document.querySelector('meta[name="description"]');
     if (md) md.setAttribute("content", d.meta_desc);
     var ogt = document.querySelector('meta[property="og:title"]');
