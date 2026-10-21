@@ -199,3 +199,16 @@ dialog.lightbox button{position:absolute;top:-2.8rem;right:0;font:inherit;font-w
 .more-books h2{font-size:clamp(1.4rem,2.4vw,1.8rem);margin:0 0 1.4rem}
 .more-books .strip{margin:0}
 @media (max-width:860px){.post-nav{grid-template-columns:1fr}.post-nav .next{grid-column:1;text-align:left}}
+
+/* La Goccia e La Goutte: copertine affiancate */
+.book-pair{grid-template-columns:minmax(300px,560px) 1fr}
+.book-pair .covers{display:flex;gap:clamp(.8rem,2vw,1.4rem);align-items:flex-start}
+.book-pair .covers .cover{flex:1 1 0;min-width:0}
+.lang-stack{margin:0 0 1.1rem}
+.lang-stack .lang{margin:0}
+@media (max-width:860px){
+  .book-pair{grid-template-columns:1fr}
+  .book-pair .covers{max-width:440px}
+  .book-pair .covers .cover{max-width:none}
+}
+.btn .flag{flex:none;width:1.35rem;height:.9rem;outline:1px solid rgba(0,0,0,.18)}
